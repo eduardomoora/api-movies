@@ -1,0 +1,37 @@
+### fetch all movies
+GET http://localhost:3000/movies
+
+### fetch all movies
+GET http://localhost:3000/movies/098a7283-c110-4616-a900-22f76941d49a
+
+### fetch all movies with queryparams
+GET http://localhost:3000/movies/?gen=Animation
+
+### fetch all movies with queryparams
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title" : "Testing new movie with validator 2",
+  "year": 1994,
+  "director": "Roger Allers, Rob Minkoff",
+  "duration": 88,
+  "poster": "https://m.media-amazon.com/images/I/81BMmrwSFOL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Adventure", "Drama"],
+  "rate": 8.5
+}
+
+
+### patch update movie
+PATCH http://localhost:3000/movies/6a360a18-c645-4b47-9a7b-2a71babbf3e0
+Content-Type: application/json
+
+{
+"year" : 2024,
+  "id": "1"
+}
+
+
+
+
